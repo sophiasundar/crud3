@@ -1,17 +1,3 @@
+//card fromation only and prop drilling
 
 
-const Students = ()=>{
-
-   return(
-     <>
-     
-     
-     
-     
-     </>
-
-   )
-
-}
-
-export default Students 
