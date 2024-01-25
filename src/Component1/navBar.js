@@ -5,7 +5,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-
+// import Provider from "./Provider"
 
 import { useNavigate } from 'react-router';
 
@@ -15,7 +15,7 @@ const NavBarMUI=()=>{
     const navigate = useNavigate()
     return(
     
-
+    //  <Provider>
     <Box sx={{ display: 'flex', marginBottom: "10px" }}>
       <CssBaseline />
       <AppBar component="nav">
@@ -56,7 +56,7 @@ const NavBarMUI=()=>{
           </Toolbar>
       </AppBar>
       </Box>
-    
+      // </Provider>
     
     )
 }

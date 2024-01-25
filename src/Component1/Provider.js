@@ -1,9 +1,9 @@
-import { useState } from "react"
-import { allStudent } from "./Student/allStudents"
+import { useState, React } from "react";
+import { allStudent } from "./Student/allStudents";
 import { allTeacher } from "./Teacher/allTeacher";
-import Context from "./Context";
+import { Context } from "./Context";
 
-
+ 
 
 const Provider=(props)=>{
   const [students,setStudents]= useState(allStudent);
@@ -18,7 +18,8 @@ const Provider=(props)=>{
                 setTeachers
             }}
         >
-             {props.children}
+            {props.children}
+             
         </Context.Provider>
     )
 
