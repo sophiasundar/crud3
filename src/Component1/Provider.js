@@ -5,8 +5,6 @@ import Context from "./Context";
 
 
 
-
-
 const Provider=(props)=>{
   const [students,setStudents]= useState(allStudent);
   const [teachers,setTeachers]= useState(allTeacher);

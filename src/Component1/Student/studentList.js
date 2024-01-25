@@ -21,7 +21,7 @@ import Button from '@mui/material/Button';
                 (e)=>stud.id!==e.id)
             )
      }
-    //  console.log(setStudents)
+      console.log(ContextData)
     return(
       <>
             <div className="App">

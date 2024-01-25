@@ -1,16 +1,23 @@
 import './App.css';
-import StudentList from './Component1/Student/studentList';
-
-
+import NavBarMUI from "./Component1/navBar";
+import Dashboard from "./Component1/dashboard";
+    
 function App() {
+  
   return (
     <div className="App">
       
-      <StudentList/>
-     
+      {/* children is to be checked */}
+       
+       <NavBarMUI></NavBarMUI>
+        <Dashboard/>
+
+
+
+      
 
     </div>
   );
-}
+  }
 
 export default App;
