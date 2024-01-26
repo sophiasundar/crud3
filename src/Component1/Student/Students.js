@@ -1,17 +1,17 @@
 
 import Context from "../Context";
 import { useContext } from 'react';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
 import IconButton from '@mui/material/IconButton';
 
-const Table = (data)=>{
+const TableStu = (data)=>{
     const ContextData = useContext(Context);
-      const navigate = useNavigate();
-      const handleDelete=()=>{
-        ContextData.setStudents(ContextData.students.filter((e)=>students.id!==e.id))
+    //   const navigate = useNavigate();
+      const handleDelete=(student)=>{
+        ContextData.setStudents(ContextData.students.filter((e)=>student.id!==e.id))
     }
     // students.name etc 
     return(
@@ -29,7 +29,8 @@ const Table = (data)=>{
                 </tr>
             </thead>
             <tbody>
-            {data.map((student)=>
+            {data.map((student)=> {
+                return(
                 <>
                 <tr key ={student.id}>
                 <th scope="row">{student.id}</th>
@@ -38,11 +39,13 @@ const Table = (data)=>{
                 <td>{student.year}</td>
                 <td><IconButton size="small">
                     <VisibilityIcon fontSize="small" sx={{color: "#f44336"}} 
-                       onClick
+                       
                     />
                     </IconButton></td>
                 <td><IconButton size="small">
-                    <EditIcon fontSize="small"  />
+                    <EditIcon fontSize="small"  
+                    
+                    />
                     </IconButton></td>
                 <td><IconButton size="small">
                     <DeleteIcon fontSize="small" sx={{color: "#aa2e25"}}
@@ -51,11 +54,11 @@ const Table = (data)=>{
                     </IconButton></td>
                 </tr>
                 </>
-            )}
+            )} )}
             </tbody>
             </table>
       </>
     )
 }
 
-export default Table
+export default TableStu

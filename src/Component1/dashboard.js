@@ -7,6 +7,7 @@ import CardHeader from '@mui/material/CardHeader';
 import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
+import TableStu from "./Student/Students";
 
 
 import { useNavigate } from 'react-router';
@@ -84,7 +85,7 @@ const Dashboard=()=>{
             </Card>
 
         </Container>
-            
+        <TableStu></TableStu>
             
 
         </>

@@ -1,11 +1,11 @@
-import { useState, React } from "react";
+import { useState, createContext, React } from "react";
 import { allStudent } from "./Student/allStudents";
 import { allTeacher } from "./Teacher/allTeacher";
-import { Context } from "./Context";
 
+export const Context = createContext();
  
 
-const Provider=(props)=>{
+export default function Provider({children}){
   const [students,setStudents]= useState(allStudent);
   const [teachers,setTeachers]= useState(allTeacher);
 
@@ -18,11 +18,10 @@ const Provider=(props)=>{
                 setTeachers
             }}
         >
-            {props.children}
+            {children}
              
         </Context.Provider>
     )
 
 
 }
-export default Provider;

@@ -56,6 +56,7 @@ const NavBarMUI=()=>{
           </Toolbar>
       </AppBar>
       </Box>
+        
       // </Provider>
     
     )
