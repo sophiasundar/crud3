@@ -1,5 +1,4 @@
-
-import Context from "../Context";
+import Context from "../Provider";
 import { useContext } from 'react';
 // import { useNavigate } from 'react-router-dom';
 import VisibilityIcon from '@mui/icons-material/Visibility';
@@ -7,16 +6,16 @@ import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
 import IconButton from '@mui/material/IconButton';
 
-const TableStu = (data)=>{
+const TableStu = ({data})=>{
     const ContextData = useContext(Context);
     //   const navigate = useNavigate();
       const handleDelete=(student)=>{
         ContextData.setStudents(ContextData.students.filter((e)=>student.id!==e.id))
     }
-    // students.name etc 
+
     return(
-      <>
-                    <table class="table">
+      
+        <table class="table">
             <thead class="thead-dark">
                 <tr>
                 <th scope="col">ID</th>
@@ -29,9 +28,7 @@ const TableStu = (data)=>{
                 </tr>
             </thead>
             <tbody>
-            {data.map((student)=> {
-                return(
-                <>
+            {data.map((student)=> 
                 <tr key ={student.id}>
                 <th scope="row">{student.id}</th>
                 <td>{student.name}</td>
@@ -53,11 +50,10 @@ const TableStu = (data)=>{
                     />
                     </IconButton></td>
                 </tr>
-                </>
-            )} )}
+            )} 
             </tbody>
             </table>
-      </>
+     
     )
 }
 
